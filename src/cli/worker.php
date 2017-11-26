@@ -31,7 +31,17 @@ $poolName = $options['pool'];
 $workerName = $options['name'];
 
 // startup worker:
-require_once __DIR__ . '/../../vendor/autoload.php';
+// startup worker:
+$autoloadPaths = [
+    __DIR__ . '/../../../autoload.php',
+    __DIR__ . '/../../vendor/autoload.php',
+];
+foreach ($autoloadPaths as $autoload) {
+    if (file_exists($autoload)) {
+        require_once $autoload;
+        break;
+    }
+}
 $config = include $pathToConfig;
 $workerFile = $config['pools'][$poolName]['worker_file'];
 $workerClass = $config['pools'][$poolName]['worker_class'];
