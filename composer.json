@@ -1,0 +1,27 @@
+{
+    "name": "nekudo/shiny_gears",
+    "description": "Simple Gearman Worker Framework",
+    "keywords": [
+        "framework",
+        "worker",
+        "manager",
+        "Gearman"
+    ],
+    "homepage": "https://github.com/nekudo/shiny_gears",
+    "authors": [
+        {
+            "name": "Simon Samtleben",
+            "email": "simon@nekudo.com",
+            "homepage": "https://nekudo.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Nekudo\\ShinyGears\\": "src/"
+        }
+    },
+    "license": "MIT"
+}
