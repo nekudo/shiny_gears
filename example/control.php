@@ -15,7 +15,7 @@ if (empty($argv[1])) {
 try {
     require_once __DIR__ . '/../vendor/autoload.php';
     $config = include __DIR__ . '/config.php';
-    $manager = new \Nekudo\ShinyGears\Manager($config);
+    $manager = new \Nekudo\ShinyGears\Manager($config['gears']);
     $action = $argv[1];
     switch ($action) {
         case 'start':

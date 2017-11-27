@@ -42,7 +42,7 @@ foreach ($autoloadPaths as $autoload) {
         break;
     }
 }
-$config = include $pathToConfig;
+$config = (include $pathToConfig)['gears'];
 $workerFile = $config['pools'][$poolName]['worker_file'];
 $workerClass = $config['pools'][$poolName]['worker_class'];
 require_once  $workerFile;
