@@ -31,9 +31,9 @@ $poolName = $options['pool'];
 $workerName = $options['name'];
 
 // startup worker:
-// startup worker:
 $autoloadPaths = [
     __DIR__ . '/../../../autoload.php',
+    __DIR__ . '/../../../../autoload.php',
     __DIR__ . '/../../vendor/autoload.php',
 ];
 foreach ($autoloadPaths as $autoload) {
